@@ -22,5 +22,26 @@ bot.onText(/\/start/, (msg) => {
       ]
     }
   });
+});
+bot.onText(/\/menu/, (msg) => {
+
+const chatId = msg.chat.id;
+
+bot.sendMessage(chatId, "Choose a category:", {
+
+reply_markup: {
+inline_keyboard: [
+[{ text: "📚 Academy", url: "https://t.me/primeprintdigitalacademy"}],
+[{ text: "🌿 Herbal", url: "https://t.me/africanherbal"}],
+[{ text: "📱 Digital Gadgets", url: "https://t.me/primeprintdigitalstore"}],
+[{ text: "👔 Fashion & Style", url: "https://t.me/primeprintfashion"}],
+[{ text: "💰 Affiliate Marketing", url: "https://t.me/primeprintdigita"}],
+[{ text: "🙏 Faith & Inspiration", url: "https://t.me/christianstudychannel"}],
+[{ text: "⚽ Sports & Games", url: "https://t.me/ultimatesportsnews"}]
+]
+
+}
+
+});
 
 });
